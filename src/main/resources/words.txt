@@ -1,0 +1,4 @@
+Scala Free in One Fifteen
+Apache Flink's runtime is now Scala free, allowing users to leverage any Scala version in their user code - including Scala 3!
+Apache Flink 1.13.6 Release Announcement
+The Apache Flink Community is please to announce another bug fix release for Flink 1.13.
