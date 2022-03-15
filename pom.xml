@@ -31,13 +31,14 @@
         </dependency>
 
 
-        <!-- flink kafka source依赖 -->
+        <!-- flink-kafka -->
         <dependency>
             <groupId>org.apache.flink</groupId>
             <artifactId>flink-connector-kafka-0.11_2.12</artifactId>
             <version>${flink.version}</version>
         </dependency>
 
+        <!--  flink-redis   -->
         <dependency>
             <groupId>org.apache.bahir</groupId>
             <artifactId>flink-connector-redis_2.11</artifactId>
@@ -45,13 +46,14 @@
         </dependency>
 
 
+        <!--  flink-es   -->
         <dependency>
             <groupId>org.apache.flink</groupId>
             <artifactId>flink-connector-elasticsearch6_2.12</artifactId>
             <version>${flink.version}</version>
         </dependency>
 
-
+        <!--  statebackend   -->
         <dependency>
             <groupId>org.apache.flink</groupId>
             <artifactId>flink-statebackend-rocksdb_2.12</artifactId>
@@ -59,6 +61,19 @@
         </dependency>
 
 
+        <!--   table api    -->
+        <dependency>
+            <groupId>org.apache.flink</groupId>
+            <artifactId>flink-table-planner_2.12</artifactId>
+            <version>${flink.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.flink</groupId>
+            <artifactId>flink-table-api-java-bridge_2.12</artifactId>
+            <version>${flink.version}</version>
+        </dependency>
+
+        <!--   mysql   -->
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
