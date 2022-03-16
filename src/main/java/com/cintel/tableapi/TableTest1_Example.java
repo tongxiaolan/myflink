@@ -8,16 +8,13 @@ import org.apache.flink.table.api.Table;
 import org.apache.flink.table.api.java.StreamTableEnvironment;
 import org.apache.flink.types.Row;
 
-/**
- * table api
- */
-public class Example {
+public class TableTest1_Example {
     public static void main(String[] args) throws Exception {
         StreamExecutionEnvironment env = StreamExecutionEnvironment.getExecutionEnvironment();
         env.setParallelism(1);
 
         // 1. 读取数据
-        DataStreamSource<String> inputStream = env.readTextFile("F:\\work\\workspaces\\idea\\myflink\\src\\main\\resources\\sensors.txt");
+        DataStreamSource<String> inputStream = env.readTextFile("D:\\workspace\\myflink\\src\\main\\resources\\sensors.txt");
 
         // 2. 转换成POJO
         DataStream<SensorReading> dataStream = inputStream.map(line -> {
@@ -25,6 +22,7 @@ public class Example {
             return new SensorReading(fields[0], Long.valueOf(fields[1]), Double.valueOf(fields[2]));
         });
 
+        dataStream.print("dataStream");
 
         // 3. 创建表环境
         StreamTableEnvironment tableEnv = StreamTableEnvironment.create(env);

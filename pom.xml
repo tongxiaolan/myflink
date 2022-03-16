@@ -73,6 +73,20 @@
             <version>${flink.version}</version>
         </dependency>
 
+        <!--  读取csv文件 table api  -->
+        <dependency>
+            <groupId>org.apache.flink</groupId>
+            <artifactId>flink-csv</artifactId>
+            <version>${flink.version}</version>
+        </dependency>
+
+        <!-- blink 环境 -->
+        <dependency>
+            <groupId>org.apache.flink</groupId>
+            <artifactId>flink-table-planner-blink_2.12</artifactId>
+            <version>${flink.version}</version>
+        </dependency>
+
         <!--   mysql   -->
         <dependency>
             <groupId>mysql</groupId>
